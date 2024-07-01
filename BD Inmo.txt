@@ -1,0 +1,66 @@
+CREATE DATABASE Inmobiliaria;
+Use Inmobiliaria;
+
+Create table DatosInmo(
+Id_Inmo int(20),
+NombreInmo varchar (30),
+DireccionInmo varchar(30),
+CorreoInmo varchar(30),
+TelInmo int(30),
+Primary key (Id_Inmo));
+
+Create table DatosClient(
+Id_Client int(20),
+NombreCli varchar (30),
+DireccionCli varchar(30),
+IdentiCli varchar(20),
+CorreoCli varchar(30),
+TelCli int(20),
+Primary key (Id_Client));
+select * from DatosClient;
+
+Create table DatosCasa(
+Id_Casa int(20),
+DireccionCasa varchar(30),
+M3 int(30),
+Precio int(30),
+Calidad varchar(10),
+Muebles varchar(5),
+Garage varchar(5),
+Primary key (Id_Casa));
+
+Create table DatosContrato(
+Id_Contrato int(20),
+Fecha date,
+TPago varchar(30),
+NombreCli varchar(30),
+NombreInmo varchar(30),
+DireccionInmo varchar(30),
+DireccionCasa varchar(30),
+M3Casa int(20),
+PrecioCasa int(30),
+Primary key (Id_Contrato));
+
+select * from DatosClient;
+
+select * from DatosCasa;
+
+select * from DatosContrato;
+
+select * from DatosInmo;
+
+drop database Inmobiliaria;
+
+drop table DatosCasa;
+
+select * from DatosClient;
+
+select * from DatosCasa;
+
+select * from DatosContrato;
+
+select * from DatosInmo;
+
+drop database ConsAutos;
+
+drop table DatosContrato;
